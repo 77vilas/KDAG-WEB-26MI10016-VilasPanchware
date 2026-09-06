@@ -65,7 +65,7 @@
             font-size: 20px;
         }
 
-        /* Select placeholder color handling */
+       
         .input-control select:invalid {
             color: rgba(255, 255, 255, 0.33);
         }
@@ -85,11 +85,11 @@
             border-bottom-color: rgb(255, 0, 72);
         }
 
-        /* Error message styling */
+        
         .error {
             color: rgb(255, 0, 72);
             font-size: 13px;
-            min-height: 20px; /* Reserves space so fields don't jump abruptly */
+            min-height: 20px; 
             margin-top: 5px;
             line-height: 1.2;
         }
@@ -129,6 +129,18 @@
                     <option value="GG">GG</option>
                     <option value="CH">CH</option>
                     <option value="MT">MT</option>
+                    <option value="AG">AG</option>
+                    <option value="AR">AR</option>
+                    <option value="BT">BT</option>
+                    <option value="CY">CY</option>
+                    <option value="SD">SD</option>
+                    <option value="EE">EE</option>
+                    <option value="EC">EC</option>
+                    <option value="IM">IM</option>
+                    <option value="MA">MA</option>
+                    <option value="ME">ME</option>
+                    <option value="NA">NA</option>
+                    <option value="PH">PH</option>
                 </select>
                 <div class="error"></div>
             </div>
@@ -137,7 +149,7 @@
         </form>
     </div>
 
-    <!-- Script moved to bottom so DOM elements exist when JavaScript runs -->
+    
     <script>
         const form = document.getElementById('form');
         const username = document.getElementById('name');
@@ -179,14 +191,14 @@
             const rollValue = roll.value.trim();
             const deptValue = dept.value;
 
-            // Name validation
+            
             if (nameValue === '') {
                 setError(username, 'Name is required');
             } else {
                 setSuccess(username);
             }
 
-            // Email validation
+            
             if (emailValue === '') {
                 setError(email, 'Email is required');
             } else if (!isValidEmail(emailValue)) {
@@ -195,7 +207,7 @@
                 setSuccess(email);
             }
 
-            // Roll validation (8 characters)
+            
             if (rollValue === '') {
                 setError(roll, 'Roll no is required');
             } else if (rollValue.length !== 9) {
@@ -204,7 +216,7 @@
                 setSuccess(roll);
             }
 
-            // Department validation
+            
             if (deptValue === '') {
                 setError(dept, 'Please select a department');
             } else {
